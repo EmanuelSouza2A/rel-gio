@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000; /* Fundo Preto */
+    color: #fff; /* Texto Branco */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.clock-container {
+    text-align: center;
+}
+
+#relogio {
+    font-size: 15vw;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums; /* Mantém os números alinhados */
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+#data {
+    font-size: 2.5vw;
+    color: #444; /* Cinza escuro para visual minimalista */
+    margin-top: 5px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+/* Painel de controle interativo */
+.controles {
+    position: fixed;
+    bottom: 40px;
+    background: #111;
+    padding: 15px 25px;
+    border-radius: 50px;
+    display: flex;
+    gap: 15px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(20px);
+    border: 1px solid #222;
+}
+
+.controles:hover {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+input, button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    background: #222;
+    color: white;
+    outline: none;
+}
+
+button {
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #ccc;
+}
